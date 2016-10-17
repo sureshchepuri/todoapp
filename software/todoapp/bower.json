@@ -16,6 +16,7 @@
     "bootstrap": "~3.3.6",
     "angular-bootstrap": "~0.14.3",
     "angular-translate": "^2.12.1",
-    "angular-translate-loader-static-files": "^2.12.1"
+    "angular-translate-loader-static-files": "^2.12.1",
+    "font-awesome": "^4.6.3"
   }
 }

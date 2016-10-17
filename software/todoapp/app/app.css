@@ -43,6 +43,12 @@
   border: 1px solid #cacaca;
   cursor: pointer;
 }
+.answer .panel {
+  cursor: text;
+}
+.answer .panel .fa-star-o{
+  cursor: pointer;
+}
 .panel .title {
   font-weight: bold;
   font-size: 17px;
@@ -53,4 +59,7 @@
 }
 hr.task-hr {
   margin: 0;
+}
+.ratings .fa-star {
+  color: green;
 }
