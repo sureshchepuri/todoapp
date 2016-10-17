@@ -2,6 +2,6 @@
 
 angular.module('todoapp.home', ['ngRoute'])
 
-.controller('View1Ctrl', [function() {
+.controller('HomeCtrl', [function() {
 
 }]);
