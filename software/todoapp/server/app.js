@@ -37,6 +37,7 @@ function init() {
   console.log("Application connected to MongoDB");
   console.log("*****************************************");
 
+  app.engine('html', require('ejs').renderFile);
   app.set('views', __dirname + '../client/app/partials');
   app.set('view engine', 'html');
 // This will change in production since we'll be using the dist folder
@@ -73,7 +74,7 @@ function init() {
           }
         });
   });
-  app.use('/', routes);
+  require("./routes/index")(app);
   app.use('/users', users);
 
 // catch 404 and forward to error handler

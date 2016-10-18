@@ -5,6 +5,8 @@ angular.module('todoapp', [
     'ngRoute',
     'ui.router',
     'ngSanitize',
+    'ngResource',
+    'ngCookies',
     'todoapp.dashboard',
     'todoapp.questions',
     'todoapp.answers',
