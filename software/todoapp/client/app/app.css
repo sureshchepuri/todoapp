@@ -38,7 +38,7 @@
   height: 34px;
   background-color: #f5f5f5;
 }
-.task .panel, .question .panel, .answer .panel {
+.topic .panel, .question .panel, .answer .panel {
   padding: 10px;
   border: 1px solid #cacaca;
   cursor: pointer;
@@ -57,7 +57,7 @@
 .question-title {
   color: red;
 }
-hr.task-hr {
+hr.topic-hr {
   margin: 0;
 }
 .ratings .fa-star {

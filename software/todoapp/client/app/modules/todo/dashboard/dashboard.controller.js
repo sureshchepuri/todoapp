@@ -5,13 +5,13 @@
     dashboardController.$inject = ['dashboardService'];
     function dashboardController(dashboardService) {
         var dc = this;
-        dc.tasks = [];
+        dc.topics = [];
         onLoad();
         function onLoad() {
-            console.log('======assigning the tasks============')
-            var getTasks = dashboardService.getTaks({}).then(function (response) {
-                console.log('======assigning it tasks============')
-                dc.tasks = response.data;
+            console.log('======assigning the topics============')
+            var getTopics = dashboardService.getTopics({}).then(function (response) {
+                console.log('======assigning it topics============')
+                dc.topics = response.data;
             });
         }
     }

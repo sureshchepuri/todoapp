@@ -8,7 +8,7 @@ angular.module('todoapp', [
     'ngResource',
     'ngCookies',
     'todoapp.dashboard',
-    'todoapp.questions',
+    'todoapp.topic',
     'todoapp.answers',
     'todoapp.version',
     'pascalprecht.translate'

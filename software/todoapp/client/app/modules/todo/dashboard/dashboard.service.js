@@ -4,15 +4,15 @@
     dashboardService.$inject = ['$q', 'API', '$cookies'];
     function dashboardService($q, API, $cookies) {
         var service = {
-            getTaks: getTasks
+            getTopics: getTopics
         }
         return service;
-        function getTasks(query) {
-            console.log('-------- sending req to get tasks..----------');
+        function getTopics(query) {
+            console.log('-------- sending req to get Topics..----------');
             var deferred = $q.defer();
-            API.getTasks({q: query}).$promise.then(onComplete).catch(onFailed);
-            function onComplete(response) {console.log('-------- got the tasks ----------', response); deferred.resolve(response); }
-            function onFailed(err) {console.log('-------- got the tasks ----------',err);deferred.reject(err);}
+            API.getTopics({q: query}).$promise.then(onComplete).catch(onFailed);
+            function onComplete(response) {console.log('-------- got the Topics ----------', response); deferred.resolve(response); }
+            function onFailed(err) {console.log('-------- got the Topics ----------',err);deferred.reject(err);}
             return deferred.promise;
         }
     }

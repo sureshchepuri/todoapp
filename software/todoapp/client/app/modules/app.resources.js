@@ -20,13 +20,13 @@
     //default actions and methods will go here..
     var getActions = function() {
         return {
-            'getTasks' : {
+            'getTopics' : {
                 method : 'GET',
-                url: '/listTasks'
+                url: '/listTopics'
             },
-            'getTask' : {
+            'getTopic' : {
                 method : 'GET',
-                url: '/api/v1/task/:id'
+                url: '/api/v1/topic/:id'
             }
         }
     }

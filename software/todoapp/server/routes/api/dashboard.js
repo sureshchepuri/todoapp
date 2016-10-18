@@ -1,26 +1,26 @@
-var TaskModel = require('../../models/TaskModel');
+var TopicModel = require('../../models/TopicModel');
 var Result = require('../../models/Result')
 var ErrorResult = require('../../models/ErrorResult')
 
 var dashboard = {
-    listTasks : function(req, res) {
-        console.log('================ listTasks =========== ');
-        TaskModel.find({}, function(err, tasks) {
+    listTopics : function(req, res) {
+        console.log('================ listTopics =========== ');
+        TopicModel.find({}, function(err, topics) {
             if (!err){
                 res.status(200);
-                res.json(new Result('OK', tasks, {}, "Success"));
+                res.json(new Result('OK', topics, {}, "Success"));
             } else {
                 res.status(400);
                 return res.json(new ErrorResult('FAILED', "Internal error occured", errors));
             }
         });
     },
-    getTask : function(req, res) {
-        console.log('================ getTask =========== ',req.params);
-        TaskModel.findOne({_id: req.params.id}, function(err, task) {
+    getTopic : function(req, res) {
+        console.log('================ getTopic =========== ',req.params);
+        TopicModel.findOne({_id: req.params.id}, function(err, topic) {
             if (!err){
                 res.status(200);
-                res.json(new Result('OK', task, {}, "Success"));
+                res.json(new Result('OK', topic, {}, "Success"));
             } else {
                 res.status(400);
                 return res.json(new ErrorResult('FAILED', "Internal error occured", errors));

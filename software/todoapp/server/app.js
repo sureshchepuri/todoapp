@@ -55,17 +55,17 @@ function init() {
   app.use(cookieParser());
   app.use(express.static(path.join(__dirname, 'public')));
 
-  var TaskModel = require('./models/TaskModel');
+  var TopicModel = require('./models/TopicModel');
   new Promise(function (resolve, reject) {
-    TaskModel.findOne({title: 'task1'})
-        .then(function (task) {
-          if (task) {
+    TopicModel.findOne({title: 'topic1'})
+        .then(function (topic) {
+          if (topic) {
             console.log('resolving from then part.....')
-            resolve(task);
+            resolve(topic);
           }
           else {
             console.log('resolving from reject part.....')
-            resolve(task);
+            resolve(topic);
           }
         })
         .catch(function (error) {
@@ -108,8 +108,8 @@ function init() {
     });
   });
 
-  var defaultTasks = require('./bootstrap/default-tasks');
-  defaultTasks.createDefaultTasks(app);
+  var defaultTopics = require('./bootstrap/default-items');
+  defaultTopics.runBootstrapScript(app);
 }
 
 module.exports = app;

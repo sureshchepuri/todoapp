@@ -1,15 +1,15 @@
 (function () {
     angular.module('todoapp')
-        .service('questionService', questionService);
-    questionService.$inject = ['$q', 'API', '$cookies'];
-    function questionService($q, API, $cookies) {
+        .service('topicService', topicService);
+    topicService.$inject = ['$q', 'API', '$cookies'];
+    function topicService($q, API, $cookies) {
         var service = {
-            getTask: getTask
+            getTopic: getTopic
         }
         return service;
-        function getTask(query) {
+        function getTopic(query) {
             var deferred = $q.defer();
-            API.getTask(query).$promise.then(onComplete).catch(onFailed);
+            API.getTopic(query).$promise.then(onComplete).catch(onFailed);
             function onComplete(resp) {deferred.resolve(resp);}
             function onFailed(err) {deferred.reject(err);}
             return deferred.promise;

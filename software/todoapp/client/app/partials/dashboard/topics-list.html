@@ -1,0 +1,12 @@
+<div class="topics" ng-repeat="topic in dc.topics">
+    <div class="topic col-md-4">
+        <div class="panel" ui-sref="topic({id:topic._id})">
+            <div class="title">{{topic.title}}</div><hr class="topic-hr">
+            <div class="topic-body">
+                <span class="desc"><b>Description:</b> {{topic.description}}</span><br />
+                <span class="status"><b>Status:</b>{{topic.status}}</span><br />
+                <span class="startDate"><b>Start date:</b>{{topic.startDate}}</span><br />
+            </div>
+        </div>
+    </div>
+</div>

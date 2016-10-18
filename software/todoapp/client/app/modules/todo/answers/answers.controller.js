@@ -2,15 +2,15 @@
 
 angular.module('todoapp.answers', ['ngRoute'])
 
-    .controller('AnswersCtrl', ['$stateParams', 'questionService', 'answerService', function($stateParams, questionService, answerService) {
+    .controller('AnswersCtrl', ['$stateParams', 'topicService', function($stateParams, topicService) {
         var ac = this;
-        ac.taskId = $stateParams.id;
-        ac.task = {};
+        ac.topicId = $stateParams.id;
+        ac.topic = {};
         init();
         function init() {
-            questionService.getTask({id: ac.taskId}).then(function(resp) {
-                console.log('======assigning task ============')
-                ac.task = resp.data;
-            });
+            /*topicService.getTopic({id: ac.topicId}).then(function(resp) {
+                console.log('======assigning topic ============')
+                ac.topic = resp.data;
+            });*/
         }
     }]);

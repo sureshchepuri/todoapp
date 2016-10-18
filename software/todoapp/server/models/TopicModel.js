@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var mongoosePaginate = require('mongoose-paginate');
 
-var TaskSchema = new mongoose.Schema({
+var TopicSchema = new mongoose.Schema({
         title: {
             type: String,
             trim: true,
@@ -37,9 +37,9 @@ var TaskSchema = new mongoose.Schema({
             }]
         }]
     },
-    { collection : 'tasks' }
+    { collection : 'topics' }
 );
-TaskSchema.plugin(mongoosePaginate);
-var TaskModel = mongoose.model('Task', TaskSchema);
+TopicSchema.plugin(mongoosePaginate);
+var TopicModel = mongoose.model('Topic', TopicSchema);
 
-module.exports = TaskModel;
+module.exports = TopicModel;

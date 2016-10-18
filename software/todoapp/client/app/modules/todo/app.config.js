@@ -11,11 +11,11 @@ config(['$locationProvider', '$routeProvider', '$urlRouterProvider', '$stateProv
             templateUrl: "app/partials/dashboard.html",
             controller: 'DashboardCtrl',
             controllerAs: 'dc'
-        }).state('questionsList', {
-            url: '/questionsList/{id}',
-            templateUrl: "app/modules/todo/questions/questions.html",
-            controller: 'QuestionsCtrl',
-            controllerAs: 'qc'
+        }).state('topic', {
+            url: '/topic/{id}',
+            templateUrl: "app/modules/todo/topic/topic.html",
+            controller: 'TopicCtrl',
+            controllerAs: 'tc'
         }).state('answersList', {
             url: '/answersList/{id}',
             templateUrl: "app/modules/todo/answers/answers.html",
