@@ -5,10 +5,20 @@
             <div class="topic-body">
                 <span class="top-answer">{{answer.title}}
                     <span class="ratings pull-right">
-                        <span ng-repeat="n in [1, 2, 3, 4, 5] track by $index"><i class="fa" ng-class="$index>=3?'fa-star-o':'fa-star'" aria-hidden="true"></i></span>
+                        <span ng-repeat="n in [1, 2, 3, 4, 5] track by $index">
+                            <a ng-click="ac.updateRatings(answer._id, $index)">
+                                <i class="fa" ng-class="$index>=(answer.rating+1)?'fa-star-o':'fa-star'" aria-hidden="true"></i>
+                            </a>
+                        </span>
                     </span>
                 </span><br />
+                    <span class="commented-by pull-right">By : {{answer.commentedBy}}</span>
             </div>
         </div>
     </div>
 </div>
+<form>
+    UserName <br> <input id="commentedBy" name="commentedBy" type="text" ng-model="ac.newAnswer.commentedBy" value="surya"><br>
+    Answer <br> <textarea id="text" name="text" ng-model="ac.newAnswer.title" data-value="test answer here.."></textarea><br>
+    <a type="button" class="btn btn-success" ng-click="ac.saveAnswer()">Post answer</a>
+</form>

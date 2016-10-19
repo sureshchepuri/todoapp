@@ -27,12 +27,25 @@ var TopicSchema = new mongoose.Schema({
                 lowercase: true,
                 unique: true
             },
+            commentedBy: {
+                type: String,
+                trim: true
+            },
             answers: [{
                 title: {
                     type: String,
                     trim: true,
                     lowercase: true,
                     unique: true
+                },
+                commentedBy: {
+                    type: String,
+                    trim: true
+                },
+                rating : {
+                    type: Number,
+                    min: 0,
+                    max: 5
                 }
             }]
         }]

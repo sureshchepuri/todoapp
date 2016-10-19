@@ -3,9 +3,14 @@
         <div class="panel col-md-12" ui-sref="answers({id:question._id})">
             <div class="title">{{question.title}}</div><hr class="topic-hr">
             <div class="topic-body">
-                <span class="top-answer">Top answer here</span><br />
-                <span class="all-ans">All answers</span><br />
+                <h4>Top answer</h4>
+                <span class="top-answer">{{question.answers[0].title}}</span><br />
             </div>
         </div>
     </div>
 </div>
+<form>
+    UserName <br> <input id="commentedBy" name="commentedBy" type="text" ng-model="tc.newQuestion.commentedBy" value="surya"><br>
+    Answer <br> <textarea id="title" name="title" ng-model="tc.newQuestion.title" data-value="test answer here.."></textarea><br>
+    <a type="button" class="btn btn-success" ng-click="tc.saveQuestion()">Post Question</a>
+</form>

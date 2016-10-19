@@ -4,7 +4,8 @@
     topicService.$inject = ['$q', 'API', '$cookies'];
     function topicService($q, API, $cookies) {
         var service = {
-            getTopic: getTopic
+            getTopic: getTopic,
+            updateTopic: updateTopic
         }
         return service;
         function getTopic(query) {
@@ -12,6 +13,13 @@
             API.getTopic(query).$promise.then(onComplete).catch(onFailed);
             function onComplete(resp) {deferred.resolve(resp);}
             function onFailed(err) {deferred.reject(err);}
+            return deferred.promise;
+        }
+        function updateTopic(query) {
+            var deferred = $q.defer();
+            API.updateTopic(query).$promise.then(onComplete).catch(onFailed);
+            function onComplete(resp) {deferred.resolve(resp)}
+            function onFailed(err) {deferred.reject(err)}
             return deferred.promise;
         }
     }

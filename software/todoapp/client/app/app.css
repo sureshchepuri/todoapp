@@ -44,7 +44,7 @@
   cursor: pointer;
 }
 .answer .panel {
-  cursor: text;
+  cursor: pointer;
 }
 .answer .panel .fa-star-o{
   cursor: pointer;
@@ -62,4 +62,7 @@ hr.topic-hr {
 }
 .ratings .fa-star, .answers-head {
   color: green;
+}
+.commentedBy {
+  color: darkgray;
 }

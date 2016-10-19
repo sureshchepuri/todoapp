@@ -27,6 +27,10 @@
             'getTopic' : {
                 method : 'GET',
                 url: '/api/v1/topic/:id'
+            },
+            'updateTopic' : {
+                method : 'POST',
+                url: '/api/v1/topic'
             }
         }
     }

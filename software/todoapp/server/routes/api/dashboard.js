@@ -26,6 +26,16 @@ var dashboard = {
                 return res.json(new ErrorResult('FAILED', "Internal error occured", errors));
             }
         });
+    },
+    updateTopic : function(req, resp) {
+        console.log('---------- add answer ----------')
+        console.log(req.body);
+        TopicModel.update({'_id': req.body._id},req.body, {}, function() {
+            console.log('updated')
+            resp.status(200);
+            resp.json(new Result('OK', {}, {}, "Success"));
+        });
+
     }
 };
 module.exports = dashboard;
