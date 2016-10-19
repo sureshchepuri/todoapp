@@ -16,8 +16,8 @@ config(['$locationProvider', '$routeProvider', '$urlRouterProvider', '$stateProv
             templateUrl: "app/modules/todo/topic/topic.html",
             controller: 'TopicCtrl',
             controllerAs: 'tc'
-        }).state('answersList', {
-            url: '/answersList/{id}',
+        }).state('answers', {
+            url: '/answers/{id}',
             templateUrl: "app/modules/todo/answers/answers.html",
             controller: 'AnswersCtrl',
             controllerAs: 'ac'

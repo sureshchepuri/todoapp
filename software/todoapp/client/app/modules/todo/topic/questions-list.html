@@ -1,6 +1,6 @@
 <div class="questions" ng-repeat="question in tc.topic.questions">
     <div class="question row-fluid">
-        <div class="panel col-md-12" ui-sref="answersList({id:1})">
+        <div class="panel col-md-12" ui-sref="answers({id:question._id})">
             <div class="title">{{question.title}}</div><hr class="topic-hr">
             <div class="topic-body">
                 <span class="top-answer">Top answer here</span><br />

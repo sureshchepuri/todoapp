@@ -60,6 +60,6 @@
 hr.topic-hr {
   margin: 0;
 }
-.ratings .fa-star {
+.ratings .fa-star, .answers-head {
   color: green;
 }
